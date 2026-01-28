@@ -1,5 +1,6 @@
 {
   "name": "TyrBot Docs",
+  "theme": "mint",
   "favicon": "/favicon.svg",
   "colors": {
     "primary": "#22c55e"
