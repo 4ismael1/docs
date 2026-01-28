@@ -1,0 +1,98 @@
+---
+title: "Verification"
+description: "Verificacion de usuarios"
+---
+
+# Verification
+
+Sistema de verificacion para nuevos miembros. Puedes usar un boton simple o un captcha para filtrar bots y cuentas falsas.
+
+<CardGroup>
+  <Card title="Configurar" icon="shield-check" href="#configuracion-rapida" />
+  <Card title="Flujo" icon="arrow-right" href="#como-funciona" />
+  <Card title="Comandos" icon="terminal" href="#comandos" />
+</CardGroup>
+
+## Cuando usarlo
+
+- <Icon icon="chevron-right" /> Servidores con mucho spam o cuentas nuevas.
+- <Icon icon="chevron-right" /> Comunidades que requieren aceptar reglas antes de escribir.
+- <Icon icon="chevron-right" /> Eventos con entradas masivas.
+
+## Como funciona
+
+1. El bot asigna un rol de **no verificado** cuando alguien entra (opcional).
+2. El usuario toca el panel de verificacion.
+3. El bot entrega el rol de **verificado** y quita el rol de no verificado.
+4. Si hay canal de logs, registra la verificacion.
+
+## Tipos de verificacion
+
+- <Icon icon="chevron-right" /> **button**: un click y listo (rapido).
+- <Icon icon="chevron-right" /> **captcha**: el usuario escribe un codigo (mas seguro).
+
+## Configuracion rapida
+
+1. `;verification setup button` o `;verification setup captcha`
+2. `;verification role @RolVerificado`
+3. `;verification unverified @RolNoVerificado` (opcional pero recomendado)
+4. `;verification panel #canal`
+5. `;verification log #canal` (opcional)
+
+> El bot necesita **Manage Roles** y su rol debe estar **arriba** de los roles que va a asignar o quitar.
+
+## Comandos
+
+### <Icon icon="terminal" /> `;verification setup <button|captcha>`
+
+- <Icon icon="chevron-right" /> **Que hace**: activa el sistema y define el tipo de verificacion.
+- <Icon icon="chevron-right" /> **Cuando usar**: primera vez que lo configuras o si quieres cambiar de modo.
+- <Icon icon="chevron-right" /> **Ejemplo**: `;verification setup captcha`
+
+### <Icon icon="terminal" /> `;verification role @rol`
+
+- <Icon icon="chevron-right" /> **Que hace**: define el rol que recibe un usuario verificado.
+- <Icon icon="chevron-right" /> **Cuando usar**: siempre que quieras dar acceso completo despues de verificar.
+- <Icon icon="chevron-right" /> **Ejemplo**: `;verification role @Miembro`
+
+### <Icon icon="terminal" /> `;verification unverified @rol`
+
+- <Icon icon="chevron-right" /> **Que hace**: define el rol que se da al entrar (no verificado).
+- <Icon icon="chevron-right" /> **Cuando usar**: si quieres bloquear canales hasta que verifiquen.
+- <Icon icon="chevron-right" /> **Ejemplo**: `;verification unverified @SinVerificar`
+
+### <Icon icon="terminal" /> `;verification panel [#canal]`
+
+- <Icon icon="chevron-right" /> **Que hace**: envia el panel con el boton de verificacion.
+- <Icon icon="chevron-right" /> **Cuando usar**: despues de configurar roles, en un canal visible.
+- <Icon icon="chevron-right" /> **Ejemplo**: `;verification panel #bienvenida`
+
+### <Icon icon="terminal" /> `;verification log #canal`
+
+- <Icon icon="chevron-right" /> **Que hace**: define el canal donde se registran verificaciones.
+- <Icon icon="chevron-right" /> **Cuando usar**: si quieres auditoria de quien se verifica.
+- <Icon icon="chevron-right" /> **Ejemplo**: `;verification log #logs`
+
+### <Icon icon="terminal" /> `;verification settings`
+
+- <Icon icon="chevron-right" /> **Que hace**: muestra la configuracion actual.
+- <Icon icon="chevron-right" /> **Cuando usar**: para revisar roles, tipo y logs.
+- <Icon icon="chevron-right" /> **Ejemplo**: `;verification settings`
+
+### <Icon icon="terminal" /> `;verification disable`
+
+- <Icon icon="chevron-right" /> **Que hace**: desactiva el sistema de verificacion.
+- <Icon icon="chevron-right" /> **Cuando usar**: si ya no necesitas filtrar usuarios nuevos.
+- <Icon icon="chevron-right" /> **Ejemplo**: `;verification disable`
+
+### <Icon icon="terminal" /> `;unverify @usuario`
+
+- <Icon icon="chevron-right" /> **Que hace**: quita el rol de verificado y vuelve a marcar como no verificado.
+- <Icon icon="chevron-right" /> **Cuando usar**: si un usuario necesita pasar el proceso otra vez.
+- <Icon icon="chevron-right" /> **Ejemplo**: `;unverify @Usuario`
+
+## Problemas comunes
+
+- <Icon icon="chevron-right" /> **No asigna roles**: el rol del bot esta debajo. Subelo en la jerarquia.
+- <Icon icon="chevron-right" /> **El boton no responde**: el bot no tiene permisos en el canal.
+- <Icon icon="chevron-right" /> **No se quita el rol no verificado**: revisa que el rol exista.

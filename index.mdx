@@ -1,97 +1,114 @@
 ---
-title: "Introduction"
-description: "Welcome to the new home for your documentation"
+title: "TyrBot"
+description: "Guia completa para configurar y usar el bot"
 ---
 
-## Setting up
+# TyrBot
 
-Get your documentation site up and running in minutes.
+Documentacion oficial de **TyrBot**. Aqui encuentras guias paso a paso, ejemplos reales y explicaciones claras de cada modulo. La idea es que cualquier persona pueda configurar el bot sin conocimientos tecnicos.
 
-<Card
-  title="Start here"
-  icon="rocket"
-  href="/quickstart"
-  horizontal
->
-  Follow our three step quickstart guide.
-</Card>
+<Callout type="info" title="Licencias">
+Si tu servidor requiere licencia, revisa la seccion **Licencias** para activar el bot y verificar el estado.
+</Callout>
 
-## Make it yours
+## Que es TyrBot
 
-Design a docs site that looks great and empowers your users.
+TyrBot es un bot de **seguridad, moderacion y automatizacion**. Su funcion principal es evitar daos masivos (Antinuke y Antiraid), registrar todo lo importante (Logging) y facilitar el trabajo del staff (Moderacion, FakePerms, autoroles y utilidades).
 
-<Columns cols={2}>
-  <Card
-    title="Edit locally"
-    icon="pen-to-square"
-    href="/development"
-  >
-    Edit your docs locally and preview them in real time.
+En palabras simples:
+
+- <Icon icon="chevron-right" /> **Protege** tu servidor de ataques y abuso de permisos.
+- <Icon icon="chevron-right" /> **Registra** cada evento importante en logs claros.
+- <Icon icon="chevron-right" /> **Automatiza** tareas repetitivas para staff y comunidad.
+
+## Lo mas importante antes de empezar
+
+Si algo no funciona, casi siempre es por uno de estos puntos:
+
+- <Icon icon="chevron-right" /> **Permisos**: el bot no tiene permiso suficiente.
+- <Icon icon="chevron-right" /> **Jerarquia**: el rol del bot esta debajo del rol objetivo.
+- <Icon icon="chevron-right" /> **Audit Log**: necesario para Antinuke/Antiraid.
+
+<Callout type="warning" title="Regla de oro">
+Sube el rol del bot por encima de los roles que quieras que pueda moderar.
+</Callout>
+
+## Ruta recomendada (15 a 20 minutos)
+
+1. **Invita el bot** con permisos completos de moderacion y logs.
+2. **Sube el rol del bot** en la jerarquia.
+3. **Configura Logging** (para auditoria).
+4. **Activa Antinuke** y define castigo.
+5. **Activa Antiraid** con reglas basicas.
+6. **Configura filtros** (links, invites, palabras).
+7. **Revisa el panel** de cada modulo.
+
+## Modulos principales
+
+<CardGroup>
+  <Card title="Seguridad" icon="shield-check" href="/modules/antinuke">
+    Antinuke, Antiraid, Filter y Verification.
   </Card>
-  <Card
-    title="Customize your site"
-    icon="palette"
-    href="/essentials/settings"
-  >
-    Customize the design and colors of your site to match your brand.
+  <Card title="Moderacion" icon="hammer" href="/modules/moderation">
+    Acciones, casos, warnings y herramientas de staff.
   </Card>
-    <Card
-    title="Set up navigation"
-    icon="map"
-    href="/essentials/navigation"
-  >
-    Organize your docs to help users find what they need and succeed with your product.
+  <Card title="Roles y permisos" icon="key" href="/modules/fakeperms">
+    Autoroles, Reaction Roles y FakePerms.
   </Card>
-  <Card
-    title="API documentation"
-    icon="terminal"
-    href="/api-reference/introduction"
-  >
-    Auto-generate API documentation from OpenAPI specifications.
+  <Card title="Comunidad" icon="users" href="/modules/confessions">
+    Join DM, Confessions y Autoresponder.
   </Card>
-</Columns>
+  <Card title="Voz" icon="microphone" href="/modules/voicemaster">
+    Canales temporales y panel de control.
+  </Card>
+  <Card title="Utilidades" icon="wrench" href="/modules/utility">
+    Herramientas generales, tags, recordatorios y mas.
+  </Card>
+</CardGroup>
 
-## Create beautiful pages
+## Como leer la documentacion
 
-Everything you need to create world-class documentation.
+Cada pagina de modulo tiene siempre la misma estructura:
 
-<Columns cols={2}>
-  <Card
-    title="Write with MDX"
-    icon="pen-fancy"
-    href="/essentials/markdown"
-  >
-    Use MDX to style your docs pages.
-  </Card>
-  <Card
-    title="Code samples"
-    icon="code"
-    href="/essentials/code"
-  >
-    Add sample code to demonstrate how to use your product.
-  </Card>
-  <Card
-    title="Images"
-    icon="image"
-    href="/essentials/images"
-  >
-    Display images and other media.
-  </Card>
-  <Card
-    title="Reusable snippets"
-    icon="recycle"
-    href="/essentials/reusable-snippets"
-  >
-    Write once and reuse across your docs.
-  </Card>
-</Columns>
+- <Icon icon="chevron-right" /> **Resumen**: que hace el modulo.
+- <Icon icon="chevron-right" /> **Requisitos**: permisos o roles necesarios.
+- <Icon icon="chevron-right" /> **Configuracion rapida**: pasos basicos para que funcione.
+- <Icon icon="chevron-right" /> **Comandos**: explicados uno por uno con ejemplos.
+- <Icon icon="chevron-right" /> **Problemas comunes**: solucion a errores frecuentes.
 
-## Need inspiration?
+## Ejemplo de configuracion minima
 
-<Card
-  title="See complete examples"
-  icon="stars"
-  href="https://mintlify.com/customers"
->
-  Browse our showcase of exceptional documentation sites.
-</Card>
+```text
+;logs channel #logs
+;logs enable
+
+;antinuke enable
+;antinuke punishment ban
+;antinuke all on 3
+;antinuke logchannel #logs-antinuke
+
+;antiraid enable
+;antiraid penalty kick
+;antiraid massjoin on 10 10
+;antiraid accountage 7
+;antiraid logs #logs-antiraid
+```
+
+## Prefijo
+
+El prefijo por defecto es `;`. Puedes cambiarlo asi:
+
+```text
+;prefix set !
+;prefix reset
+```
+
+## Siguiente paso
+
+Si es tu primera vez, empieza por:
+
+- <Icon icon="chevron-right" /> Installation
+- <Icon icon="chevron-right" /> Permissions
+- <Icon icon="chevron-right" /> Antinuke
+- <Icon icon="chevron-right" /> Logging
+

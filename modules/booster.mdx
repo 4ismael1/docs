@@ -1,0 +1,60 @@
+---
+title: "Booster"
+description: "Beneficios para boosters"
+---
+
+# Booster
+
+Funciones para personas que boostean el servidor: rol personalizado, color, nombre e icono.
+
+<CardGroup>
+  <Card title="Boosters" icon="sparkles" href="#comandos-para-boosters" />
+  <Card title="Admin" icon="shield-check" href="#comandos-de-admin" />
+</CardGroup>
+
+## Comandos para boosters
+
+### <Icon icon="terminal" /> `;booster role <color> [nombre]`
+- <Icon icon="chevron-right" /> **Que hace**: crea un rol personalizado.
+- <Icon icon="chevron-right" /> **Cuando usar**: primer beneficio de booster.
+
+### <Icon icon="terminal" /> `;booster color <color>`
+- <Icon icon="chevron-right" /> **Que hace**: cambia el color del rol.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras cambiar el color de tu rol.
+
+### <Icon icon="terminal" /> `;booster name <nombre>`
+- <Icon icon="chevron-right" /> **Que hace**: cambia el nombre del rol.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras renombrar elementos.
+
+### <Icon icon="terminal" /> `;booster icon <emoji|url>`
+- <Icon icon="chevron-right" /> **Que hace**: cambia icono del rol.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras personalizar emojis o reacciones.
+- <Icon icon="chevron-right" /> **Nota**: requiere servidor con nivel 2 de boost.
+
+### <Icon icon="terminal" /> `;booster delete`
+- <Icon icon="chevron-right" /> **Que hace**: elimina tu rol personalizado.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+## Comandos de admin
+
+### <Icon icon="terminal" /> `;booster setup`
+- <Icon icon="chevron-right" /> **Que hace**: inicializa el sistema.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras configurar o agregar algo nuevo.
+
+### <Icon icon="terminal" /> `;booster channel #canal`
+- <Icon icon="chevron-right" /> **Que hace**: canal donde se anuncian boosts.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras definir donde se registran eventos.
+
+### <Icon icon="terminal" /> `;booster message <mensaje>`
+- <Icon icon="chevron-right" /> **Que hace**: mensaje de anuncio.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras personalizar el mensaje de boost.
+- <Icon icon="chevron-right" /> **Variables**: `{user}`, `{username}`, `{server}`, `{boosts}`
+
+### <Icon icon="terminal" /> `;booster baserole @rol`
+- <Icon icon="chevron-right" /> **Que hace**: rol base para posicionar roles personalizados.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras definir la posicion base del rol.
+
+## Problemas comunes
+
+- <Icon icon="chevron-right" /> **No crea rol**: el bot no tiene Manage Roles o rol alto.
+- <Icon icon="chevron-right" /> **Icono falla**: falta nivel 2 de boost.

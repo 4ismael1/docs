@@ -1,0 +1,64 @@
+---
+title: "VoiceMaster"
+description: "Canales de voz temporales"
+---
+
+# VoiceMaster
+
+Crea canales de voz temporales para cada usuario y permite controlarlos con comandos o panel.
+
+<CardGroup>
+  <Card title="Configurar" icon="microphone" href="#configuracion-rapida" />
+  <Card title="Control" icon="adjustments-horizontal" href="#comandos-de-usuario" />
+</CardGroup>
+
+## Configuracion rapida
+
+1. `;vm setup` (crea categoria y canal generador)
+2. `;vm interface #canal` (panel de botones)
+
+## Comandos de admin
+
+### <Icon icon="terminal" /> `;vm setup [categoria]`
+- <Icon icon="chevron-right" /> **Que hace**: crea la categoria y el canal generador.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras configurar o agregar algo nuevo.
+
+### <Icon icon="terminal" /> `;vm interface [#canal]`
+- <Icon icon="chevron-right" /> **Que hace**: crea el panel de control con botones.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras configurar o agregar algo nuevo.
+
+### <Icon icon="terminal" /> `;vm disable`
+- <Icon icon="chevron-right" /> **Que hace**: desactiva el sistema y limpia datos.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras desactivar temporalmente.
+
+## Comandos de usuario
+
+### <Icon icon="terminal" /> `;vm lock` / `;vm unlock`
+- <Icon icon="chevron-right" /> **Que hace**: bloquea o desbloquea tu canal.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando debas moderar una situacion.
+
+### <Icon icon="terminal" /> `;vm rename <nombre>`
+- <Icon icon="chevron-right" /> **Que hace**: cambia el nombre del canal.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras renombrar elementos.
+
+### <Icon icon="terminal" /> `;vm limit <numero>`
+- <Icon icon="chevron-right" /> **Que hace**: ajusta el limite de usuarios.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras ajustar limites o umbrales.
+
+### <Icon icon="terminal" /> `;vm permit @usuario`
+- <Icon icon="chevron-right" /> **Que hace**: permite acceso a un usuario especifico.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras permitir acceso a alguien.
+
+### <Icon icon="terminal" /> `;vm reject @usuario`
+- <Icon icon="chevron-right" /> **Que hace**: niega acceso a un usuario.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras bloquear a alguien en tu canal.
+
+### <Icon icon="terminal" /> `;vm claim`
+- <Icon icon="chevron-right" /> **Que hace**: reclama un canal si el propietario original salio.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando el propietario original salio y quieres reclamar el canal.
+
+## Notas
+
+- <Icon icon="chevron-right" /> Debes estar en tu canal de voz para usar comandos.
+
+

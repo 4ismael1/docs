@@ -1,0 +1,114 @@
+---
+title: "Antiraid"
+description: "Proteccion contra raids masivos"
+---
+
+# Antiraid
+
+Antiraid protege la entrada del servidor detectando raids, cuentas nuevas y cuentas sin avatar. Aplica una penalizacion y registra el evento.
+
+<CardGroup>
+  <Card title="Configurar" icon="shield-check" href="#configuracion-rapida" />
+  <Card title="Reglas" icon="list" href="#reglas" />
+  <Card title="Logs" icon="clipboard" href="#logs" />
+</CardGroup>
+
+## Panel interactivo (recomendado)
+
+La mayoria de servidores configuran Antiraid desde el panel interactivo. Es mas rapido y te deja ver el estado de todas las reglas en un solo lugar.
+
+```text
+;antiraid
+```
+
+Si prefieres comandos manuales, estan mas abajo.
+
+## Por que usar antiraid
+
+Durante un raid pueden entrar decenas de cuentas en segundos. Antiraid bloquea entradas sospechosas y evita el spam antes de que ocurra.
+
+## Requisitos
+
+- <Icon icon="chevron-right" /> View Audit Log.
+- <Icon icon="chevron-right" /> Permisos segun la penalizacion (kick/ban).
+- <Icon icon="chevron-right" /> Rol de cuarentena configurado si usas `quarantine`.
+
+## Configuracion rapida
+
+1. `;antiraid enable`
+2. `;antiraid penalty kick`
+3. `;antiraid massjoin on 10 10`
+4. `;antiraid accountage 7`
+5. `;antiraid noavatar on`
+6. `;antiraid logs #logs-antiraid`
+
+## Reglas
+
+- <Icon icon="chevron-right" /> **Mass Join**: detecta X joins en Y segundos.
+- <Icon icon="chevron-right" /> **Account Age**: bloquea cuentas mas nuevas que N dias.
+- <Icon icon="chevron-right" /> **No Avatar**: bloquea cuentas sin foto.
+
+## Comandos
+
+### <Icon icon="terminal" /> `;antiraid`
+
+- <Icon icon="chevron-right" /> **Que hace**: abre el panel interactivo.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras revisar y ajustar la proteccion rapidamente.
+
+### <Icon icon="terminal" /> `;antiraid enable` / `;antiraid disable`
+
+- <Icon icon="chevron-right" /> **Que hace**: activa o desactiva el sistema.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras encenderlo o pausarlo durante mantenimiento.
+
+### <Icon icon="terminal" /> `;antiraid penalty <ban|kick|quarantine>`
+
+- <Icon icon="chevron-right" /> **Que hace**: define la penalizacion.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras decidir que hacer con cuentas sospechosas.
+- <Icon icon="chevron-right" /> **Nota**: `quarantine` requiere rol en Antinuke.
+
+### <Icon icon="terminal" /> `;antiraid massjoin <on|off> [threshold] [timeframe]`
+
+- <Icon icon="chevron-right" /> **Que hace**: define cuantas entradas en cuantos segundos.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando tu servidor recibe raids o entradas masivas.
+- <Icon icon="chevron-right" /> **Ejemplo**: `;antiraid massjoin on 10 10`.
+
+### <Icon icon="terminal" /> `;antiraid accountage <dias>`
+
+- <Icon icon="chevron-right" /> **Que hace**: edad minima de cuenta. Usa 0 para desactivar.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras bloquear cuentas recien creadas.
+
+### <Icon icon="terminal" /> `;antiraid noavatar <on|off>`
+
+- <Icon icon="chevron-right" /> **Que hace**: bloquea cuentas sin avatar.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando tu servidor sufre spam de cuentas vacias.
+
+### <Icon icon="terminal" /> `;antiraid logs [#canal]`
+
+- <Icon icon="chevron-right" /> **Que hace**: define o quita canal de logs.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras auditar bloqueos y acciones.
+
+### <Icon icon="terminal" /> `;antiraid settings`
+
+- <Icon icon="chevron-right" /> **Que hace**: muestra estado y reglas actuales.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites revisar el estado actual.
+
+## Logs
+
+Configura un canal dedicado para revisar entradas bloqueadas.
+
+```text
+;antiraid logs #logs-antiraid
+```
+
+## Whitelist y Trusted
+
+Antiraid comparte whitelist y trusted con Antinuke.
+
+- <Icon icon="terminal" /> `;whitelist` / `;whitelist add @usuario`
+- <Icon icon="terminal" /> `;trusted` / `;trusted add @usuario`
+
+## Problemas comunes
+
+- <Icon icon="chevron-right" /> **No aplica penalizacion**: revisa permisos del bot.
+- <Icon icon="chevron-right" /> **Quarantine falla**: configura `;antinuke setroles quarantine`.
+

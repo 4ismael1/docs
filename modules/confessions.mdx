@@ -1,0 +1,50 @@
+---
+title: "Confessions"
+description: "Confesiones anonimas"
+---
+
+# Confessions
+
+Permite enviar confesiones anonimas con panel y modal.
+
+<CardGroup>
+  <Card title="Configurar" icon="shield-check" href="#configuracion-rapida" />
+  <Card title="Panel" icon="rectangle-group" href="#panel" />
+  <Card title="Comandos" icon="terminal" href="#comandos" />
+</CardGroup>
+
+## Configuracion rapida
+
+1. `;confessions setup #canal`
+2. `;confessions panel #canal`
+
+## Comandos
+
+### <Icon icon="terminal" /> `;confessions setup #canal`
+- <Icon icon="chevron-right" /> **Que hace**: define el canal donde se publican confesiones.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras configurar o agregar algo nuevo.
+
+### <Icon icon="terminal" /> `;confessions panel [#canal]`
+- <Icon icon="chevron-right" /> **Que hace**: envia el panel con boton para confesar.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras configurar o agregar algo nuevo.
+
+### <Icon icon="terminal" /> `;confessions send <texto>`
+- <Icon icon="chevron-right" /> **Que hace**: envia una confesion directamente (borra el mensaje del autor).
+- <Icon icon="chevron-right" /> **Cuando usar**: si no quieres usar el panel.
+
+### <Icon icon="terminal" /> `;confessions disable`
+- <Icon icon="chevron-right" /> **Que hace**: desactiva el sistema.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras desactivar temporalmente.
+
+### <Icon icon="terminal" /> `;confessions stats`
+- <Icon icon="chevron-right" /> **Que hace**: muestra total y ultima confesion.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras ver estadisticas del sistema.
+
+## Panel
+
+El panel abre un modal. La confesion se publica como embed anonimo.
+
+## Problemas comunes
+
+- <Icon icon="chevron-right" /> **No envian confesiones**: revisa si el canal existe y el bot tiene permisos.
+

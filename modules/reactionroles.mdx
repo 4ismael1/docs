@@ -1,0 +1,40 @@
+---
+title: "ReactionRoles"
+description: "Roles por reaccion"
+---
+
+# ReactionRoles
+
+Permite que los usuarios obtengan roles al reaccionar a un mensaje.
+
+<CardGroup>
+  <Card title="Crear" icon="smile" href="#comandos" />
+  <Card title="Gestionar" icon="list" href="#comandos" />
+</CardGroup>
+
+## Comandos
+
+### <Icon icon="terminal" /> `;rr add <mensaje_id> <rol> <emoji>`
+- <Icon icon="chevron-right" /> **Que hace**: crea un reaction role y agrega la reaccion al mensaje.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras configurar o agregar algo nuevo.
+
+### <Icon icon="terminal" /> `;rr remove <mensaje_id> <emoji>`
+- <Icon icon="chevron-right" /> **Que hace**: elimina un reaction role.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+### <Icon icon="terminal" /> `;rr list`
+- <Icon icon="chevron-right" /> **Que hace**: lista reaction roles configurados.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites revisar el estado actual.
+
+### <Icon icon="terminal" /> `;rr clear [mensaje_id]`
+- <Icon icon="chevron-right" /> **Que hace**: limpia los reaction roles de un mensaje o todos (admin).
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+## Requisitos
+
+- <Icon icon="chevron-right" /> Manage Roles.
+- <Icon icon="chevron-right" /> El rol del bot debe estar arriba del rol asignado.
+
+## Problemas comunes
+
+- <Icon icon="chevron-right" /> **No asigna rol**: el bot no puede gestionar el rol.

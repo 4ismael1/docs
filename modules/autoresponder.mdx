@@ -1,0 +1,80 @@
+---
+title: "AutoResponder"
+description: "Respuestas automaticas por triggers"
+---
+
+# AutoResponder
+
+Crea respuestas automaticas cuando alguien escribe una palabra o frase.
+
+<CardGroup>
+  <Card title="Crear" icon="plus" href="#configuracion-rapida" />
+  <Card title="Tipos" icon="adjustments-horizontal" href="#tipos-de-coincidencia" />
+  <Card title="Comandos" icon="terminal" href="#comandos" />
+</CardGroup>
+
+## Configuracion rapida
+
+1. `;ar add hola Hola {user}`
+2. `;ar type hola contains`
+3. `;ar list`
+
+## Variables disponibles
+
+- <Icon icon="chevron-right" /> `{user}` menciona al usuario
+- <Icon icon="chevron-right" /> `{user.name}` nombre
+- <Icon icon="chevron-right" /> `{user.display}` nombre visible
+- <Icon icon="chevron-right" /> `{server}` nombre del servidor
+- <Icon icon="chevron-right" /> `{channel}` menciona el canal
+
+## Tipos de coincidencia
+
+- <Icon icon="chevron-right" /> `contains` (por defecto)
+- <Icon icon="chevron-right" /> `exact`
+- <Icon icon="chevron-right" /> `startswith`
+- <Icon icon="chevron-right" /> `endswith`
+- <Icon icon="chevron-right" /> `regex` (avanzado)
+
+## Comandos
+
+### <Icon icon="terminal" /> `;autoresponder` / `;ar`
+- <Icon icon="chevron-right" /> **Que hace**: abre ayuda del modulo.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras ver la ayuda y estado del modulo.
+
+### <Icon icon="terminal" /> `;ar add <trigger> <respuesta>`
+- <Icon icon="chevron-right" /> **Que hace**: crea una auto-respuesta.
+- <Icon icon="chevron-right" /> **Cuando usar**: respuestas frecuentes, reglas, links, etc.
+
+### <Icon icon="terminal" /> `;ar remove <trigger>`
+- <Icon icon="chevron-right" /> **Que hace**: elimina una respuesta.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+### <Icon icon="terminal" /> `;ar edit <trigger> <respuesta>`
+- <Icon icon="chevron-right" /> **Que hace**: cambia el texto de respuesta.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras modificar una respuesta existente.
+
+### <Icon icon="terminal" /> `;ar list`
+- <Icon icon="chevron-right" /> **Que hace**: lista triggers con estado y usos.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites revisar el estado actual.
+
+### <Icon icon="terminal" /> `;ar info <trigger>`
+- <Icon icon="chevron-right" /> **Que hace**: muestra detalles (tipo, usos, creador).
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites revisar el estado actual.
+
+### <Icon icon="terminal" /> `;ar toggle <trigger>`
+- <Icon icon="chevron-right" /> **Que hace**: activa/desactiva sin borrar.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras alternar el estado.
+
+### <Icon icon="terminal" /> `;ar type <trigger> <tipo>`
+- <Icon icon="chevron-right" /> **Que hace**: cambia el tipo de coincidencia.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras cambiar el tipo de coincidencia.
+
+### <Icon icon="terminal" /> `;ar clear`
+- <Icon icon="chevron-right" /> **Que hace**: elimina todas las respuestas (admin).
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+## Problemas comunes
+
+- <Icon icon="chevron-right" /> **No responde**: revisa si esta activado y el tipo de coincidencia.
+- <Icon icon="chevron-right" /> **Regex falla**: valida la expresion.
+

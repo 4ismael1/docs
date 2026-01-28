@@ -1,0 +1,44 @@
+---
+title: "Giveaway"
+description: "Sistema de sorteos"
+---
+
+# Giveaway
+
+Crea sorteos con boton para participar y seleccion de ganadores.
+
+<CardGroup>
+  <Card title="Crear" icon="gift" href="#comandos" />
+  <Card title="Gestionar" icon="list" href="#comandos" />
+</CardGroup>
+
+## Comandos
+
+### <Icon icon="terminal" /> `;giveaway start <tiempo> <ganadores> <premio>`
+- <Icon icon="chevron-right" /> **Que hace**: inicia un sorteo en el canal actual.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras iniciar o crear algo.
+- <Icon icon="chevron-right" /> **Ejemplo**: `;giveaway start 1d 1 Nitro`
+
+### <Icon icon="terminal" /> `;giveaway end <mensaje_id|link|id_embed>`
+- <Icon icon="chevron-right" /> **Que hace**: termina un sorteo y elige ganador.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras terminar o cerrar una funcion.
+
+### <Icon icon="terminal" /> `;giveaway reroll <mensaje_id|link|id_embed>`
+- <Icon icon="chevron-right" /> **Que hace**: elige un nuevo ganador.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras elegir un nuevo resultado.
+
+### <Icon icon="terminal" /> `;giveaway list`
+- <Icon icon="chevron-right" /> **Que hace**: muestra sorteos activos.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites revisar el estado actual.
+
+### <Icon icon="terminal" /> `;giveaway delete <mensaje_id|link|id_embed>`
+- <Icon icon="chevron-right" /> **Que hace**: elimina un sorteo sin ganador.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+## Formato de tiempo
+
+- <Icon icon="chevron-right" /> `1h`, `30m`, `1d`, `1w`
+
+## Problemas comunes
+
+- <Icon icon="chevron-right" /> **No termina**: revisa si el bot esta online para ejecutar el cierre.

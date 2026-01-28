@@ -1,0 +1,80 @@
+---
+title: "Filter"
+description: "Filtros de contenido"
+---
+
+# Filter
+
+Bloquea invitaciones, links, palabras prohibidas y fuerza canales solo imagenes.
+
+<CardGroup>
+  <Card title="Activar" icon="shield-check" href="#configuracion-rapida" />
+  <Card title="Palabras" icon="ban" href="#palabras-prohibidas" />
+  <Card title="Whitelist" icon="check-circle" href="#whitelist" />
+</CardGroup>
+
+## Configuracion rapida
+
+1. `;filter invite on`
+2. `;filter links on`
+3. `;filter words add palabra`
+4. `;filter logs #canal`
+
+## Comandos
+
+### <Icon icon="terminal" /> `;filter`
+- <Icon icon="chevron-right" /> **Que hace**: muestra estado de los filtros.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras ver la ayuda o estado del modulo.
+
+### <Icon icon="terminal" /> `;filter invite <on|off>`
+- <Icon icon="chevron-right" /> **Que hace**: bloquea invitaciones de Discord.
+- <Icon icon="chevron-right" /> **Cuando usar**: anti spam de invites.
+
+### <Icon icon="terminal" /> `;filter links <on|off>`
+- <Icon icon="chevron-right" /> **Que hace**: bloquea links generales.
+- <Icon icon="chevron-right" /> **Cuando usar**: canales que no permiten publicidad.
+
+### <Icon icon="terminal" /> `;filter words`
+- <Icon icon="chevron-right" /> **Que hace**: muestra palabras prohibidas.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras revisar la lista de palabras.
+
+### <Icon icon="terminal" /> `;filter words add <palabra>`
+- <Icon icon="chevron-right" /> **Que hace**: agrega una palabra a la lista.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras configurar o agregar algo nuevo.
+
+### <Icon icon="terminal" /> `;filter words remove <palabra>`
+- <Icon icon="chevron-right" /> **Que hace**: quita una palabra.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+### <Icon icon="terminal" /> `;filter words clear`
+- <Icon icon="chevron-right" /> **Que hace**: limpia toda la lista (admin).
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+### <Icon icon="terminal" /> `;filter whitelist channel <invite|link> #canal`
+- <Icon icon="chevron-right" /> **Que hace**: permite invites o links solo en ese canal.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras definir donde se registran eventos.
+
+### <Icon icon="terminal" /> `;filter whitelist role <invite|link> @rol`
+- <Icon icon="chevron-right" /> **Que hace**: permite invites o links a usuarios con ese rol.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras revisar una lista o historial.
+
+### <Icon icon="terminal" /> `;filter logs [#canal]`
+- <Icon icon="chevron-right" /> **Que hace**: define o quita el canal de logs del filtro.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras definir donde se registran eventos.
+
+### <Icon icon="terminal" /> `;filter imageonly <add|remove> #canal`
+- <Icon icon="chevron-right" /> **Que hace**: marca un canal como solo imagenes.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras configurar o agregar algo nuevo.
+
+## Palabras prohibidas
+
+El filtro de palabras elimina mensajes con palabras exactas encontradas en la lista.
+
+## Whitelist
+
+La whitelist aplica solo a filtros de **invite** y **link**.
+
+## Problemas comunes
+
+- <Icon icon="chevron-right" /> **No borra mensajes**: el bot necesita Manage Messages.
+- <Icon icon="chevron-right" /> **Canal de solo imagenes falla**: revisa permisos de borrar mensajes.

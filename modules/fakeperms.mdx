@@ -1,0 +1,62 @@
+---
+title: "FakePerms"
+description: "Permisos falsos para comandos del bot"
+---
+
+# FakePerms
+
+Permisos virtuales que solo afectan los comandos del bot (no cambian permisos reales de Discord).
+
+<CardGroup>
+  <Card title="Asignar" icon="key" href="#comandos" />
+  <Card title="Panel" icon="rectangle-group" href="#comandos" />
+</CardGroup>
+
+## Cuando usarlo
+
+- <Icon icon="chevron-right" /> Dar acceso a comandos sin tocar roles reales.
+- <Icon icon="chevron-right" /> Permisos finos para moderadores nuevos.
+
+## Comandos
+
+### <Icon icon="terminal" /> `;fakeperms`
+- <Icon icon="chevron-right" /> **Que hace**: muestra ayuda y permisos disponibles.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras ver la ayuda o estado del modulo.
+
+### <Icon icon="terminal" /> `;fp permissions`
+- <Icon icon="chevron-right" /> **Que hace**: lista permisos validos.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras ver la lista de permisos disponibles.
+
+### <Icon icon="terminal" /> `;fp edit <rol/usuario>`
+- <Icon icon="chevron-right" /> **Que hace**: panel interactivo para activar permisos.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras editar permisos desde el panel.
+
+### <Icon icon="terminal" /> `;fp grant <rol/usuario> <permiso>`
+- <Icon icon="chevron-right" /> **Que hace**: otorga permiso falso.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras otorgar un permiso falso.
+
+### <Icon icon="terminal" /> `;fp revoke <rol/usuario> <permiso>`
+- <Icon icon="chevron-right" /> **Que hace**: revoca permiso falso.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+### <Icon icon="terminal" /> `;fp check <usuario>`
+- <Icon icon="chevron-right" /> **Que hace**: muestra permisos efectivos (directos + roles).
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras revisar los permisos efectivos.
+
+### <Icon icon="terminal" /> `;fp list [rol/usuario]`
+- <Icon icon="chevron-right" /> **Que hace**: lista permisos falsos configurados.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites revisar el estado actual.
+
+### <Icon icon="terminal" /> `;fp clear <rol/usuario>`
+- <Icon icon="chevron-right" /> **Que hace**: elimina permisos falsos de un objetivo.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+### <Icon icon="terminal" /> `;fp clearall`
+- <Icon icon="chevron-right" /> **Que hace**: elimina todas las configuraciones (admin).
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+## Notas
+
+- <Icon icon="chevron-right" /> Los permisos falsos solo funcionan dentro de comandos del bot.
+- <Icon icon="chevron-right" /> No afectan al panel de Discord ni a otros bots.
+

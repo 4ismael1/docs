@@ -1,0 +1,47 @@
+---
+title: "Permisos"
+description: "Permisos necesarios y jerarquia"
+---
+
+# Permisos
+
+La mayoria de errores del bot vienen de permisos o jerarquia. Esta pagina explica lo minimo necesario para cada tipo de modulo.
+
+<CardGroup>
+  <Card title="Jerarquia" icon="arrow-up" href="#jerarquia" />
+  <Card title="Audit Log" icon="shield-check" href="#audit-log" />
+  <Card title="Moderacion" icon="hammer" href="#permisos-de-moderacion" />
+</CardGroup>
+
+## Jerarquia
+
+- <Icon icon="chevron-right" /> El rol del bot debe estar **arriba** de los roles que va a quitar o asignar.
+- <Icon icon="chevron-right" /> Si el usuario tiene un rol mas alto que el bot, no se puede moderar.
+
+## Audit Log
+
+Antinuke y Antiraid necesitan **View Audit Log** para detectar quien hizo la accion. Sin esto, el bot puede fallar o no castigar.
+
+## Permisos de moderacion
+
+Recomendados para uso completo:
+
+- <Icon icon="chevron-right" /> **Kick Members** (expulsiones)
+- <Icon icon="chevron-right" /> **Ban Members** (baneos)
+- <Icon icon="chevron-right" /> **Moderate Members** (timeout)
+- <Icon icon="chevron-right" /> **Manage Roles** (quarantine, autoroles)
+- <Icon icon="chevron-right" /> **Manage Channels** (lock/unlock, nuke)
+
+## Permisos de logs
+
+- <Icon icon="chevron-right" /> **View Audit Log**
+- <Icon icon="chevron-right" /> **Read Message History**
+- <Icon icon="chevron-right" /> **Send Messages**
+- <Icon icon="chevron-right" /> **Embed Links**
+
+## Checklist rapido
+
+1. El bot puede leer y escribir en los canales.
+2. El bot puede usar embeds.
+3. El bot esta arriba de roles objetivo.
+4. Audit Log activado.

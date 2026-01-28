@@ -1,0 +1,48 @@
+---
+title: "JoinDM"
+description: "Mensajes de bienvenida por DM"
+---
+
+# JoinDM
+
+Envia un mensaje de bienvenida por DM cuando alguien entra.
+
+<CardGroup>
+  <Card title="Configurar" icon="envelope" href="#configuracion-rapida" />
+  <Card title="Variables" icon="code" href="#variables" />
+</CardGroup>
+
+## Configuracion rapida
+
+1. `;joindm enable`
+2. `;joindm message Bienvenido {user.name} a {server}`
+3. `;joindm test`
+
+## Comandos
+
+### <Icon icon="terminal" /> `;joindm enable` / `;joindm disable`
+- <Icon icon="chevron-right" /> **Que hace**: activa o desactiva el sistema.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras activar esta funcion.
+
+### <Icon icon="terminal" /> `;joindm message <mensaje>`
+- <Icon icon="chevron-right" /> **Que hace**: define el mensaje que se envia por DM.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras personalizar el mensaje de bienvenida.
+
+### <Icon icon="terminal" /> `;joindm test`
+- <Icon icon="chevron-right" /> **Que hace**: te envia un DM de prueba.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras probar sin afectar a los demas.
+
+### <Icon icon="terminal" /> `;joindm variables`
+- <Icon icon="chevron-right" /> **Que hace**: muestra variables disponibles.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites ver variables disponibles.
+
+## Variables
+
+- <Icon icon="chevron-right" /> `{user}` `{user.mention}` `{user.name}` `{user.id}` `{user.avatar}` `{user.created}`
+- <Icon icon="chevron-right" /> `{server}` `{server.name}` `{server.id}` `{server.members}`
+
+## Problemas comunes
+
+- <Icon icon="chevron-right" /> **No llegan DMs**: el usuario tiene DMs cerrados.
+- <Icon icon="chevron-right" /> **No envia**: revisa que el mensaje este configurado.
+

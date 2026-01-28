@@ -1,0 +1,53 @@
+---
+title: "Configuracion"
+description: "Ajustes basicos del servidor"
+---
+
+# Configuracion
+
+Esta seccion explica la configuracion minima para que los modulos funcionen sin errores.
+
+<CardGroup>
+  <Card title="Jerarquia" icon="arrow-up" href="#jerarquia-de-roles" />
+  <Card title="Logs" icon="clipboard" href="#canales-de-logs" />
+  <Card title="Prefijo" icon="hashtag" href="#prefijo" />
+</CardGroup>
+
+## Jerarquia de roles
+
+- <Icon icon="chevron-right" /> El rol del bot debe estar **arriba** de los roles que va a manejar.
+- <Icon icon="chevron-right" /> Si el bot no puede moderar a alguien, casi siempre es por jerarquia.
+
+## Canales de logs
+
+Recomendado crear canales separados:
+
+- <Icon icon="chevron-right" /> `#logs-antinuke`
+- <Icon icon="chevron-right" /> `#logs-antiraid`
+- <Icon icon="chevron-right" /> `#logs-moderacion`
+- <Icon icon="chevron-right" /> `#logs-servidor`
+
+En el modulo **Logging** puedes centralizar todo o separarlo por categoria.
+
+## Prefijo
+
+El prefijo por defecto es `;`. Puedes cambiarlo:
+
+```text
+;prefix set !
+;prefix reset
+```
+
+## Configuracion base recomendada
+
+1. Configura logs generales.
+2. Activa Antinuke y Antiraid.
+3. Revisa permisos del bot.
+4. Ajusta filtros (links, invites, palabras).
+
+## Problemas comunes
+
+- <Icon icon="chevron-right" /> **No responde**: revisa prefijo y permisos en el canal.
+- <Icon icon="chevron-right" /> **No castiga**: revisa jerarquia y permisos avanzados.
+
+

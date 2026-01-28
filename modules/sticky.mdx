@@ -1,0 +1,40 @@
+---
+title: "Sticky"
+description: "Mensajes fijos en canales"
+---
+
+# Sticky
+
+Mantiene un mensaje fijo al final del canal, reenviandolo cuando hay actividad.
+
+<CardGroup>
+  <Card title="Crear" icon="map-pin" href="#comandos" />
+  <Card title="Gestionar" icon="list" href="#comandos" />
+</CardGroup>
+
+## Comandos
+
+### <Icon icon="terminal" /> `;sticky <mensaje>`
+- <Icon icon="chevron-right" /> **Que hace**: crea un sticky simple en el canal actual.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras fijar un mensaje importante.
+
+### <Icon icon="terminal" /> `;sticky embed <titulo> | <descripcion>`
+- <Icon icon="chevron-right" /> **Que hace**: crea un sticky con embed.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras un sticky con formato.
+
+### <Icon icon="terminal" /> `;sticky remove`
+- <Icon icon="chevron-right" /> **Que hace**: elimina el sticky del canal.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+### <Icon icon="terminal" /> `;sticky view`
+- <Icon icon="chevron-right" /> **Que hace**: muestra el sticky actual.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites revisar el estado actual.
+
+### <Icon icon="terminal" /> `;sticky list`
+- <Icon icon="chevron-right" /> **Que hace**: lista stickies del servidor.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites revisar el estado actual.
+
+## Notas
+
+- <Icon icon="chevron-right" /> El bot borra y reenvia el sticky para mantenerlo al final.
+- <Icon icon="chevron-right" /> Tiene cooldown interno para evitar spam.

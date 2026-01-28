@@ -1,0 +1,74 @@
+---
+title: "Logging"
+description: "Logs del servidor y eventos"
+---
+
+# Logging
+
+Registro detallado de eventos del servidor (mensajes, miembros, voz, moderacion, etc.).
+
+<CardGroup>
+  <Card title="Configurar" icon="clipboard" href="#configuracion-rapida" />
+  <Card title="Eventos" icon="list" href="#eventos" />
+  <Card title="Canales" icon="hashtag" href="#canales" />
+</CardGroup>
+
+## Configuracion rapida
+
+1. `;logs channel #logs`
+2. `;logs enable` (activa todos los eventos)
+3. `;logs category Moderacion #mod-logs` (opcional)
+
+## Canales
+
+- <Icon icon="chevron-right" /> **Canal general**: recibe todos los eventos si no hay canal por categoria.
+- <Icon icon="chevron-right" /> **Canal por categoria**: sobrescribe solo esa categoria.
+
+## Eventos
+
+Los eventos se agrupan por categoria (Mensajes, Miembros, Servidor, Voz, Moderacion). Usa `;logs events` para verlos.
+
+## Comandos
+
+### <Icon icon="terminal" /> `;logs`
+- <Icon icon="chevron-right" /> **Que hace**: abre panel interactivo para activar/desactivar eventos.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras definir donde se registran eventos.
+
+### <Icon icon="terminal" /> `;logs channel [#canal]`
+- <Icon icon="chevron-right" /> **Que hace**: define o muestra el canal general.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras definir donde se registran eventos.
+- <Icon icon="chevron-right" /> **Ejemplo**: `;logs channel #logs`
+
+### <Icon icon="terminal" /> `;logs channel_remove`
+- <Icon icon="chevron-right" /> **Que hace**: elimina el canal general (si hay categorias configuradas, siguen funcionando).
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras definir donde se registran eventos.
+
+### <Icon icon="terminal" /> `;logs enable [eventos...]`
+- <Icon icon="chevron-right" /> **Que hace**: activa todos o algunos eventos.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras activar esta funcion.
+- <Icon icon="chevron-right" /> **Ejemplo**: `;logs enable message_delete member_join`
+
+### <Icon icon="terminal" /> `;logs disable [eventos...]`
+- <Icon icon="chevron-right" /> **Que hace**: desactiva todos o algunos eventos.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras desactivar temporalmente.
+- <Icon icon="chevron-right" /> **Ejemplo**: `;logs disable message_edit`
+
+### <Icon icon="terminal" /> `;logs events`
+- <Icon icon="chevron-right" /> **Que hace**: lista eventos disponibles y su nombre.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras definir donde se registran eventos.
+
+### <Icon icon="terminal" /> `;logs category [categoria] [#canal|off]`
+- <Icon icon="chevron-right" /> **Que hace**: asigna un canal para una categoria.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras desactivar temporalmente.
+- <Icon icon="chevron-right" /> **Ejemplo**: `;logs category Moderacion #mod-logs`
+- <Icon icon="chevron-right" /> **Nota**: si usas `off`, esa categoria vuelve al canal general.
+
+### <Icon icon="terminal" /> `;logs category_remove <categoria>`
+- <Icon icon="chevron-right" /> **Que hace**: quita el canal especifico de una categoria.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras definir donde se registran eventos.
+
+## Problemas comunes
+
+- <Icon icon="chevron-right" /> **No aparecen logs**: revisa permisos de envio y embeds en el canal.
+- <Icon icon="chevron-right" /> **Eventos faltantes**: activa eventos con `;logs enable`.
+

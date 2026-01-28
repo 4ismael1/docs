@@ -1,0 +1,172 @@
+---
+title: "Moderacion"
+description: "Comandos de moderacion y casos"
+---
+
+# Moderacion
+
+Modulo completo para acciones de moderacion, registro de casos y herramientas de staff.
+
+<CardGroup>
+  <Card title="Acciones" icon="hammer" href="#acciones" />
+  <Card title="Casos" icon="clipboard" href="#casos" />
+  <Card title="Roles" icon="users" href="#roles" />
+</CardGroup>
+
+## Preparacion basica
+
+- <Icon icon="chevron-right" /> El bot necesita permisos de Kick/Ban/Moderate/Manage Roles.
+- <Icon icon="chevron-right" /> El rol del bot debe estar arriba del rol del usuario objetivo.
+- <Icon icon="chevron-right" /> Configura logs si quieres auditoria detallada.
+
+## Acciones
+
+### <Icon icon="terminal" /> `;kick @usuario [razon]`
+- <Icon icon="chevron-right" /> **Que hace**: expulsa al usuario.
+- <Icon icon="chevron-right" /> **Cuando usar**: faltas leves o expulsiones temporales.
+
+### <Icon icon="terminal" /> `;ban @usuario [razon]`
+- <Icon icon="chevron-right" /> **Que hace**: banea al usuario (acepta IDs).
+- <Icon icon="chevron-right" /> **Cuando usar**: faltas graves.
+
+### <Icon icon="terminal" /> `;unban <usuario_id> [razon]`
+- <Icon icon="chevron-right" /> **Que hace**: quita un ban.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+### <Icon icon="terminal" /> `;softban @usuario [razon]`
+- <Icon icon="chevron-right" /> **Que hace**: ban y unban inmediato para borrar mensajes recientes.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando debas moderar una situacion.
+
+### <Icon icon="terminal" /> `;timeout @usuario <tiempo> [razon]`
+- <Icon icon="chevron-right" /> **Que hace**: silencio temporal.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando debas moderar una situacion.
+
+### <Icon icon="terminal" /> `;untimeout @usuario [razon]`
+- <Icon icon="chevron-right" /> **Que hace**: quita el timeout.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+### <Icon icon="terminal" /> `;quarantine @usuario [razon]`
+- <Icon icon="chevron-right" /> **Que hace**: quita roles y aplica rol de cuarentena.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando debas moderar una situacion.
+- <Icon icon="chevron-right" /> **Nota**: requiere rol de cuarentena configurado.
+
+### <Icon icon="terminal" /> `;unquarantine @usuario [razon]`
+- <Icon icon="chevron-right" /> **Que hace**: restaura roles y quita cuarentena.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+### <Icon icon="terminal" /> `;warn @usuario [razon]`
+- <Icon icon="chevron-right" /> **Que hace**: agrega una advertencia.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando debas moderar una situacion.
+
+### <Icon icon="terminal" /> `;purge <cantidad> [@usuario]`
+- <Icon icon="chevron-right" /> **Que hace**: borra mensajes en lote.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando debas moderar una situacion.
+
+### <Icon icon="terminal" /> `;nuke`
+- <Icon icon="chevron-right" /> **Que hace**: recrea el canal y elimina historial completo.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando debas moderar una situacion.
+
+### <Icon icon="terminal" /> `;slowmode <segundos>`
+- <Icon icon="chevron-right" /> **Que hace**: cambia modo lento del canal.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando debas moderar una situacion.
+
+### <Icon icon="terminal" /> `;lock` / `;unlock`
+- <Icon icon="chevron-right" /> **Que hace**: bloquea o desbloquea el canal.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando debas moderar una situacion.
+
+### <Icon icon="terminal" /> `;massban <ids...>` / `;masskick <ids...>`
+- <Icon icon="chevron-right" /> **Que hace**: acciones masivas usando IDs.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando debas moderar una situacion.
+
+## Casos
+
+Los casos guardan historial de cada accion.
+
+### <Icon icon="terminal" /> `;case <numero>`
+- <Icon icon="chevron-right" /> **Que hace**: muestra un caso especifico.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras ver un caso especifico.
+
+### <Icon icon="terminal" /> `;case edit <numero> <razon>`
+- <Icon icon="chevron-right" /> **Que hace**: edita la razon del caso.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras corregir la razon del caso.
+
+### <Icon icon="terminal" /> `;case delete <numero>`
+- <Icon icon="chevron-right" /> **Que hace**: elimina un caso (admin).
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+### <Icon icon="terminal" /> `;case list [@usuario]`
+- <Icon icon="chevron-right" /> **Que hace**: lista casos recientes o de un usuario.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites revisar el estado actual.
+
+### <Icon icon="terminal" /> `;case search <usuario|id>`
+- <Icon icon="chevron-right" /> **Que hace**: historial completo de un usuario.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras revisar una lista o historial.
+
+### <Icon icon="terminal" /> `;case recent [cantidad]`
+- <Icon icon="chevron-right" /> **Que hace**: ultimos casos del servidor.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras revisar una lista o historial.
+
+### <Icon icon="terminal" /> `;case clear <usuario> [tipo]`
+- <Icon icon="chevron-right" /> **Que hace**: elimina casos por usuario (admin).
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+### <Icon icon="terminal" /> `;history <usuario>`
+- <Icon icon="chevron-right" /> **Que hace**: alias rapido de `case search`.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras revisar una lista o historial.
+
+### <Icon icon="terminal" /> `;note <usuario> <contenido>`
+- <Icon icon="chevron-right" /> **Que hace**: agrega una nota sin sancion.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras dejar contexto sin sancion.
+
+## Warns
+
+### <Icon icon="terminal" /> `;warn list <usuario>`
+- <Icon icon="chevron-right" /> **Que hace**: muestra advertencias.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites revisar el estado actual.
+
+### <Icon icon="terminal" /> `;warn remove <usuario> <case_id>`
+- <Icon icon="chevron-right" /> **Que hace**: elimina un warn especifico.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+### <Icon icon="terminal" /> `;warn clear <usuario>`
+- <Icon icon="chevron-right" /> **Que hace**: elimina todos los warns (admin).
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+## Roles
+
+### <Icon icon="terminal" /> `;role <usuario> <rol>`
+- <Icon icon="chevron-right" /> **Que hace**: agrega o quita un rol.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras asignar o quitar un rol rapidamente.
+
+### <Icon icon="terminal" /> `;role create <nombre>`
+- <Icon icon="chevron-right" /> **Que hace**: crea un rol nuevo.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras configurar o agregar algo nuevo.
+
+### <Icon icon="terminal" /> `;role delete <rol>`
+- <Icon icon="chevron-right" /> **Que hace**: elimina un rol.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites eliminar o limpiar configuracion.
+
+### <Icon icon="terminal" /> `;role all <rol>`
+- <Icon icon="chevron-right" /> **Que hace**: agrega o quita un rol a todos.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras aplicar un rol a todos los miembros.
+
+### <Icon icon="terminal" /> `;role humans <rol>` / `;role bots <rol>`
+- <Icon icon="chevron-right" /> **Que hace**: agrega o quita un rol a humanos o bots.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras aplicar un rol solo a humanos o bots.
+
+## Respuesta del bot
+
+El bot responde con un mensaje corto de caso:
+
+```text
+OK `Case #8` Usuario ha sido expulsado.
+```
+
+Los logs y DM al usuario mantienen detalles completos.
+
+## Problemas comunes
+
+- <Icon icon="chevron-right" /> **No puede moderar**: revisa jerarquia de roles.
+- <Icon icon="chevron-right" /> **Timeout no funciona**: falta `Moderate Members`.
+- <Icon icon="chevron-right" /> **Quarantine no funciona**: falta rol de cuarentena.
+

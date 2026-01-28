@@ -1,0 +1,199 @@
+---
+title: "Antinuke"
+description: "Proteccion contra acciones masivas"
+---
+
+# Antinuke
+
+Antinuke es el sistema que limita acciones destructivas y castiga cuando alguien supera un limite. Protege el servidor contra bans/kicks masivos, creacion o eliminacion de canales y roles, webhooks, spam de @everyone y bots no autorizados.
+
+<CardGroup>
+  <Card title="Configurar" icon="shield-check" href="#configuracion-rapida" />
+  <Card title="Acciones" icon="list" href="#acciones-protegidas" />
+  <Card title="Castigos" icon="hammer" href="#castigos" />
+</CardGroup>
+
+## Panel interactivo (recomendado)
+
+La forma mas facil de configurar Antinuke es con el **panel interactivo**. Desde ahi puedes activar protecciones, ver limites y cambiar castigos con botones.
+
+```text
+;antinuke
+```
+
+Si prefieres comandos manuales, puedes usarlos abajo, pero la mayoria de usuarios configuran todo desde el panel.
+
+## Por que usar antinuke
+
+Un solo moderador con permisos altos puede destruir un servidor en segundos. Antinuke pone limites y aplica castigos automaticos para detener danos en tiempo real.
+
+## Como funciona
+
+1. El bot monitorea acciones desde el Audit Log.
+2. Cuenta cuantas veces ocurre una accion en un periodo corto.
+3. Si se supera el limite, aplica un castigo.
+4. Registra el evento en el canal de logs y menciona el rol de alertas (si existe).
+
+## Requisitos
+
+- <Icon icon="chevron-right" /> Permiso **View Audit Log**.
+- <Icon icon="chevron-right" /> El rol del bot debe estar **arriba** de roles objetivo.
+- <Icon icon="chevron-right" /> Permisos de moderacion segun el castigo (ban/kick/roles/canales).
+
+## Configuracion rapida
+
+1. `;antinuke enable`
+2. `;antinuke logchannel #logs-antinuke`
+3. `;antinuke setroles quarantine` (solo si usaras quarantine)
+4. `;antinuke punishment ban`
+5. `;antinuke all on 3`
+6. `;antinuke settings` para revisar
+
+<Callout type="warning" title="Importante">
+Si no hay Audit Log o el rol del bot esta muy abajo, Antinuke no podra castigar.
+</Callout>
+
+## Acciones protegidas
+
+<CardGroup>
+  <Card title="ban_members" icon="user-minus" />
+  <Card title="kick_members" icon="log-out" />
+  <Card title="create_channels" icon="plus" />
+  <Card title="delete_channels" icon="trash" />
+  <Card title="create_roles" icon="plus" />
+  <Card title="delete_roles" icon="trash" />
+  <Card title="create_webhooks" icon="link" />
+  <Card title="mention_everyone" icon="at-sign" />
+  <Card title="add_bot" icon="cpu-chip" />
+</CardGroup>
+
+## Castigos
+
+- <Icon icon="chevron-right" /> **ban**: banea al infractor.
+- <Icon icon="chevron-right" /> **kick**: expulsa al infractor.
+- <Icon icon="chevron-right" /> **strip**: quita todos los roles.
+- <Icon icon="chevron-right" /> **quarantine**: quita roles y asigna rol de cuarentena.
+
+### Castigo global
+
+**Sintaxis**:
+
+```text
+;antinuke punishment <ban|kick|strip|quarantine>
+```
+
+**Ejemplo**:
+
+```text
+;antinuke punishment ban
+```
+
+### Castigo por accion
+
+**Sintaxis**:
+
+```text
+;antinuke actionpunishment <accion> <ban|kick|strip|quarantine|default>
+```
+
+**Ejemplo**:
+
+```text
+;antinuke actionpunishment add_bot quarantine
+```
+
+Si usas `default`, vuelve al castigo global.
+
+### Bots y cuarentena
+
+Si el castigo es cuarentena y el infractor es bot, puedes forzar kick:
+
+```text
+;antinuke botkick on
+```
+
+## Comandos principales
+
+### <Icon icon="terminal" /> `;antinuke`
+
+- <Icon icon="chevron-right" /> **Que hace**: abre el panel interactivo.
+- <Icon icon="chevron-right" /> **Cuando usar**: para cambiar ajustes con botones.
+
+### <Icon icon="terminal" /> `;antinuke enable` / `;antinuke disable`
+
+- <Icon icon="chevron-right" /> **Que hace**: activa o desactiva el sistema completo.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras activar esta funcion.
+
+### <Icon icon="terminal" /> `;antinuke settings`
+
+- <Icon icon="chevron-right" /> **Que hace**: muestra estado, castigo, acciones activas e inactivas.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando necesites revisar el estado actual.
+
+### <Icon icon="terminal" /> `;antinuke logchannel [#canal]`
+
+- <Icon icon="chevron-right" /> **Que hace**: define el canal de logs. Sin canal, lo desactiva.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras definir donde se registran eventos.
+
+### <Icon icon="terminal" /> `;antinuke alertrole [@rol]`
+
+- <Icon icon="chevron-right" /> **Que hace**: define el rol que se menciona en alertas.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando debas moderar una situacion.
+
+### <Icon icon="terminal" /> `;antinuke revert`
+
+- <Icon icon="chevron-right" /> **Que hace**: activa o desactiva la reversion de acciones (borra canales/roles/webhooks maliciosos).
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando debas moderar una situacion.
+
+### <Icon icon="terminal" /> `;antinuke toggle <accion> [limite]`
+
+- <Icon icon="chevron-right" /> **Que hace**: activa o desactiva una accion y ajusta el limite.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando quieras alternar el estado.
+
+## Accesos rapidos por accion
+
+Cada comando activa o desactiva una proteccion especifica:
+
+- <Icon icon="terminal" /> `;antinuke ban <on|off> [limite]`
+- <Icon icon="terminal" /> `;antinuke kick <on|off> [limite]`
+- <Icon icon="terminal" /> `;antinuke channel <create|delete|both> <on|off> [limite]`
+- <Icon icon="terminal" /> `;antinuke role <create|delete|both> <on|off> [limite]`
+- <Icon icon="terminal" /> `;antinuke webhook <on|off> [limite]`
+- <Icon icon="terminal" /> `;antinuke everyone <on|off> [limite]`
+- <Icon icon="terminal" /> `;antinuke bot <on|off>`
+- <Icon icon="terminal" /> `;antinuke all <on|off> [limite]`
+
+## Roles especiales
+
+### <Icon icon="terminal" /> `;antinuke setroles quarantine [@rol]`
+
+- <Icon icon="chevron-right" /> **Que hace**: crea o configura el rol de cuarentena y un canal dedicado.
+- <Icon icon="chevron-right" /> **Cuando usar**: antes de usar el castigo `quarantine`.
+
+### <Icon icon="terminal" /> `;antinuke setroles mute [@rol]`
+
+- <Icon icon="chevron-right" /> **Que hace**: crea o configura rol de mute con permisos negados.
+- <Icon icon="chevron-right" /> **Cuando usar**: cuando debas moderar una situacion.
+
+## Whitelist
+
+La whitelist excluye usuarios o roles de Antinuke y Antiraid.
+
+- <Icon icon="terminal" /> `;whitelist` muestra la lista.
+- <Icon icon="terminal" /> `;whitelist add @usuario` agrega usuario.
+- <Icon icon="terminal" /> `;whitelist role add @rol` agrega rol completo.
+
+## Trusted
+
+Usuarios trusted pueden **configurar** Antinuke y Antiraid. Solo el propietario del servidor puede gestionarlos.
+
+- <Icon icon="terminal" /> `;trusted` muestra lista.
+- <Icon icon="terminal" /> `;trusted add @usuario`
+- <Icon icon="terminal" /> `;trusted remove @usuario`
+
+## Problemas comunes
+
+- <Icon icon="chevron-right" /> **No castiga**: revisa permisos y Audit Log.
+- <Icon icon="chevron-right" /> **Cuarentena falla**: faltan permisos de roles o rol de cuarentena.
+- <Icon icon="chevron-right" /> **No menciona rol de alertas**: el rol no se puede mencionar o esta deshabilitado.
+
+
