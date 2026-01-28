@@ -5,77 +5,79 @@
   "colors": {
     "primary": "#22c55e"
   },
-  "navigation": [
-    {
-      "group": "Inicio",
-      "pages": [
-        "index",
-        "getting-started/installation",
-        "getting-started/configuration",
-        "getting-started/permissions",
-        "getting-started/licensing",
-        "getting-started/faq"
-      ]
-    },
-    {
-      "group": "Seguridad",
-      "pages": [
-        "modules/antinuke",
-        "modules/antiraid",
-        "modules/filter",
-        "modules/verification"
-      ]
-    },
-    {
-      "group": "Moderacion",
-      "pages": [
-        "modules/moderation",
-        "modules/logging",
-        "modules/forcenick"
-      ]
-    },
-    {
-      "group": "Roles y Permisos",
-      "pages": [
-        "modules/autorole",
-        "modules/reactionroles",
-        "modules/fakeperms",
-        "modules/booster"
-      ]
-    },
-    {
-      "group": "Comunidad",
-      "pages": [
-        "modules/joindm",
-        "modules/confessions",
-        "modules/autoresponder"
-      ]
-    },
-    {
-      "group": "Voz",
-      "pages": [
-        "modules/voicemaster"
-      ]
-    },
-    {
-      "group": "Utilidades",
-      "pages": [
-        "modules/utility",
-        "modules/tags",
-        "modules/reminder",
-        "modules/snipe",
-        "modules/starboard",
-        "modules/sticky",
-        "modules/lookup",
-        "modules/emoji",
-        "modules/afk"
-      ]
-    },
-    {
-      "group": "Otros",
-      "pages": [
-        "modules/giveaway"
-      ]
-    }
-  ]
+  "navigation": {
+    "groups": [
+      {
+        "group": "Inicio",
+        "pages": [
+          "index",
+          "getting-started/installation",
+          "getting-started/configuration",
+          "getting-started/permissions",
+          "getting-started/licensing",
+          "getting-started/faq"
+        ]
+      },
+      {
+        "group": "Seguridad",
+        "pages": [
+          "modules/antinuke",
+          "modules/antiraid",
+          "modules/filter",
+          "modules/verification"
+        ]
+      },
+      {
+        "group": "Moderacion",
+        "pages": [
+          "modules/moderation",
+          "modules/logging",
+          "modules/forcenick"
+        ]
+      },
+      {
+        "group": "Roles y Permisos",
+        "pages": [
+          "modules/autorole",
+          "modules/reactionroles",
+          "modules/fakeperms",
+          "modules/booster"
+        ]
+      },
+      {
+        "group": "Comunidad",
+        "pages": [
+          "modules/joindm",
+          "modules/confessions",
+          "modules/autoresponder"
+        ]
+      },
+      {
+        "group": "Voz",
+        "pages": [
+          "modules/voicemaster"
+        ]
+      },
+      {
+        "group": "Utilidades",
+        "pages": [
+          "modules/utility",
+          "modules/tags",
+          "modules/reminder",
+          "modules/snipe",
+          "modules/starboard",
+          "modules/sticky",
+          "modules/lookup",
+          "modules/emoji",
+          "modules/afk"
+        ]
+      },
+      {
+        "group": "Otros",
+        "pages": [
+          "modules/giveaway"
+        ]
+      }
+    ]
+  }
 }
